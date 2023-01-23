@@ -60,7 +60,7 @@ userRouter.post('/login',async(req,res)=>{
                 res.status(201).json({token});                
             } 
             else{
-                req.send('invalid creds');
+                res.status(404).json({msg:'invalid credentials'});
             }
         }
     })
